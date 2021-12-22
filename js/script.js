@@ -86,3 +86,18 @@ var swiper = new Swiper(".blog-slider", {
     keyboard: true,
   });
 console.log("Portfolio Swiper is working");
+// ======================= Scroll Up section ==========================
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    //when the scroll higher that 560 viewpoint, then the scroll up icon should appear and on clicking should reach top
+    if(this.scrollY>= 560){
+        scrollUp.classList.add('show-scroll');
+        console.log("inside if");
+    }
+    else{
+        scrollUp.classList.remove('show-scroll');
+    }
+    console.log("Scroll up is being called");
+}
+
+window.addEventListener('scroll', scrollUp)
